@@ -1,0 +1,126 @@
+int led_1=8;
+int led_2=9;
+int led_3=10;
+int led_4=11;
+int led_5=12;
+int led_6=13;
+int led_7=4;
+int led_8=5;
+int led_9=6;
+int led_10=7;
+int sw_1=3;
+int sw_2=2;
+int sw_3=A5;
+int pulsador=0;
+int contador=0;
+int leds [10]={led_1,led_2,led_3,led_4,led_5,led_6,led_7,led_8,led_9,led_10};
+
+void setup() {
+   pinMode (led_1,OUTPUT);
+   pinMode (led_2,OUTPUT);
+   pinMode(led_3,OUTPUT);
+   pinMode(led_4,OUTPUT);
+   pinMode(led_5,OUTPUT);
+   pinMode(led_6,OUTPUT);
+   pinMode(led_7,OUTPUT);
+   pinMode(led_8,OUTPUT);
+   pinMode(led_9,OUTPUT);
+   pinMode(led_10,OUTPUT);
+   pinMode(sw_1,INPUT);
+   pinMode(sw_2,INPUT);
+   pinMode(sw_3,INPUT);
+   pinMode(pulsador,INPUT);
+
+
+}
+
+void loop() {
+    if(digitalRead(sw_1)==LOW&&digitalRead(sw_2)==LOW&&digitalRead(sw_3)==LOW)
+  {
+    for (int contador=0;contador<10;contador++){
+    digitalWrite(led_1,LOW);
+    digitalWrite(led_2,LOW);
+    digitalWrite(led_3,LOW);
+    digitalWrite(led_4,LOW) ; 
+    digitalWrite(led_5,LOW);
+    digitalWrite(led_6,LOW);
+    digitalWrite(led_7,LOW);
+    digitalWrite(led_8,LOW);
+    digitalWrite(led_9,LOW);
+    digitalWrite(led_10,LOW);
+  }}
+  
+  if(digitalRead(sw_1)==LOW&&digitalRead(sw_2)==HIGH&&digitalRead(sw_3)==LOW){
+for (int contador=0;contador<10;contador++){
+  digitalWrite(led_5,HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(led_3,HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(led_1,HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(led_9,HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(led_7,HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+    }
+  }
+  if(digitalRead(sw_1)==LOW&&digitalRead(sw_2)==HIGH&&digitalRead(sw_3)==HIGH){
+for (int contador=0;contador<10;contador++){
+  digitalWrite(led_6,HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(led_4,HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(led_2,HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(led_10,HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(led_8,HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  }}
+  if(digitalRead(sw_1)==HIGH&&digitalRead(sw_2)==HIGH&&digitalRead(sw_3)==HIGH){
+  for (;contador<10/2;contador++){
+  digitalWrite(leds [contador],HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(leds [contador],HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(leds [contador],HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(leds [contador],HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  digitalWrite(leds [contador],HIGH);
+  delay(50);
+  digitalWrite(leds[contador],LOW);
+  delay(50);
+  }
+  }  }
+
+
+
